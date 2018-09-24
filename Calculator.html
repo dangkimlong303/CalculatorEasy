@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<form name="formCalc">
+    Number 1:<input type="text" name="txtNumb1"><br>
+    Number 2:<input type="text" name="txtNumb2"><br>
+    <input type="button" value="Addition(+)" onclick="sumValue()">
+    <input type="button" value="Subtraction(-)" onclick="subValue()">
+    <input type="button" value="Multiplication(*)" onclick="mulValue()">
+    <input type="button" value="Division(/)" onclick="chiaValue()"><br>
+    Result:<input type="text" name="txtResult"><br>
+
+
+    <script>
+        var num1;
+        var num2;
+        var result;
+        function sumValue() {
+            num1 = Number(document.formCalc.txtNumb1.value);
+            num2 = Number(document.formCalc.txtNumb2.value);
+            result = num1+num2;
+            document.formCalc.txtResult.value = result;
+        }
+        function subValue() {
+            num1 = Number(document.formCalc.txtNumb1.value);
+            num2 = Number(document.formCalc.txtNumb2.value);
+            result = num1-num2;
+            document.formCalc.txtResult.value = result;
+        }
+        function mulValue() {
+            num1 = Number(document.formCalc.txtNumb1.value);
+            num2 = Number(document.formCalc.txtNumb2.value);
+            result = num1*num2;
+            document.formCalc.txtResult.value = result;
+        }
+       function chiaValue() {
+           num1 = Number(document.formCalc.txtNumb1.value);
+           num2 = Number(document.formCalc.txtNumb2.value);
+           result = num1/num2;
+           document.formCalc.txtResult.value = result;
+       }
+    </script>
+</form>
+</body>
+</html>
